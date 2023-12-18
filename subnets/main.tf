@@ -12,7 +12,7 @@ resource "aws_subnet" "main" {
 }
 
 output "subnets_op" {
-    value = aws_subnet.main.*.id 
+    value = aws_subnet.main 
 }
 
 # Creating Route Tables
