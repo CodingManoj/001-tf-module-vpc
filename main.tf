@@ -3,9 +3,9 @@ resource "aws_vpc" "main" {
 }
 
 module "subnets" {
-    for_each = var.subnets
-
     source   = "./subnets"
-    subnets  = var.subnets
-    vpc_id   = aws_vpc.main.id 
+
+    for_each = var.subnets
+    subnets  = each.value
+    vpc_id   = aws_vpc.main.id  
 }
