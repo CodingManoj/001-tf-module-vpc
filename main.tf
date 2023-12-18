@@ -9,3 +9,7 @@ module "subnets" {
     subnets  = each.value
     vpc_id   = aws_vpc.main.id  
 }
+
+output "subnets-map" {
+    value =  module.subnets.subnets
+}
