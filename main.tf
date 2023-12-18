@@ -11,5 +11,5 @@ module "subnets" {
 }
 
 output "subnets-map" {
-    value =  module.subnets.subnets
+    value =  module.subnets
 }
