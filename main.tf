@@ -11,5 +11,5 @@ module "subnets" {
 }
 
 output "op" {
-    value = module.subnets.op
+    value = module.subnets
 }
