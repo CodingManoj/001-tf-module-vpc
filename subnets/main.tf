@@ -21,8 +21,7 @@ resource "aws_route_table" "main" {
     }
 }
 
-
-# # Route table association to subnets
+# Route table association to subnets
 resource "aws_route_table_association" "a" {
   for_each          = var.subnets
   
