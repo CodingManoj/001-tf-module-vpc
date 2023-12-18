@@ -11,6 +11,10 @@ resource "aws_subnet" "main" {
     }
 }
 
+output "subnets" {
+    value = aws_subnet.main
+}
+
 # Creating Route Tables
 resource "aws_route_table" "main" {
   for_each          = var.subnets
